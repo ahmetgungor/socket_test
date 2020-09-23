@@ -22,10 +22,10 @@ app.get('/json',(req,res)=>{
 
 
 
-const hostname = '';
+const hostname = '68.66.226.83';
 const port = 3001;
 
 
-server.listen(port, () => {
+server.listen(port,hostname, () => {
     console.log("Server running at http://"+hostname+":"+port+"/");
 });
