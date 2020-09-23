@@ -22,7 +22,8 @@ app.get('/json',(req,res)=>{
 
 
 
-server.listen(3100,()=>{
-    console.log("server başladı");
-})
-
+const hostname = '68.66.226.83';
+const port = 3001;
+server.listen(port, hostname, () => {
+    console.log("Server running at http://"+hostname+":"+port+"/");
+});
