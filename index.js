@@ -1,5 +1,5 @@
 const { Http2ServerRequest } = require('http2');
-const request = require('request');
+
 const axios = require('axios');
 const app = require('express')();
 
@@ -22,8 +22,12 @@ app.get('/json',(req,res)=>{
 
 
 
-const hostname = '68.66.226.83';
+const hostname = '';
 const port = 3001;
-server.listen(port, hostname, () => {
+const out = getStreamSomehow();
+const err = getStreamSomehow();
+const myConsole = new console.Console(out, err);
+
+server.listen(port, () => {
     console.log("Server running at http://"+hostname+":"+port+"/");
 });
