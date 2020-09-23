@@ -24,9 +24,7 @@ app.get('/json',(req,res)=>{
 
 const hostname = '';
 const port = 3001;
-const out = getStreamSomehow();
-const err = getStreamSomehow();
-const myConsole = new console.Console(out, err);
+
 
 server.listen(port, () => {
     console.log("Server running at http://"+hostname+":"+port+"/");
